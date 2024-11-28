@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "environment": {
+        "value": "uat"
+      },
+      "businessDirectory": {
+        "value": "mw"
+      },
+      "azureServ": {
+        "value": "qai"
+      },
+      "apiname": {
+        "value": "qai"
+      },
+      "apimSuffix": {
+        "value": "ai-products-platform-a"
+      },
+      "apiType": {
+        "value": "http"
+      },
+      "apidescription": {
+        "value": "Function App qai API for BAQA"
+      },
+      "apidispname": {
+        "value": "Function App qai"
+      },
+      "version": {
+        "value": "v1.0"
+      },
+      "apiBackendName":{
+        "value": "func-mw-uat-baqa-workloads-qai-a"
+      },
+      "backendurl":{
+        "value": "https://func-mw-uat-baqa-workloads-qai-a.azurewebsites.net/api"
+      },
+      "loggerId": {
+        "value": "/subscriptions/3132fa6a-bc35-412f-a0a0-7a1965dc6dc7/resourceGroups/rg-mw-uat-ai-products-platform-a/providers/Microsoft.ApiManagement/service/apim-mw-uat-ai-products-platform-a/loggers/appi-mw-uat-ai-products-platform-a"
+      }
+    }
+}

@@ -1,0 +1,13 @@
+.git*
+.vscode
+__azurite_db*__.json
+__blobstorage__
+__queuestorage__
+local.settings.json
+test
+.venv
+test_ingestion.py
+single_turn_consum
+di_content_review
+*.env
+*.ipynb

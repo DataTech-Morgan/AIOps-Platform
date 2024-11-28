@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "Region": {
+        "value": "eastus2"
+      },
+      "appName":{
+        "value": "baqa"
+      },
+      "ResourceNameSuffix": {
+        "value": "workloads-a"
+      },
+      "ApplicationName":{
+        "value": "AI BaQa components"
+      },
+      "SNOWApplicationName":{
+        "value": "AI BaQa components"
+      },
+      "SNOWBASysID": {
+        "value": "8e76eaf2c345521480f62645df013152"
+      },
+      "SNOWBU": {
+        "value": "ITS"
+      },
+      "SNOWBusinessCriticality": {
+        "value": "Critical"
+      },
+      "SNOWDataClassification": {
+        "value": "Confidential"
+      },
+      "SNOWOwner": {
+        "value": "Amit Sethi (ITSGRTG)"
+      },
+      "SNOWValueStream": {
+        "value": "Tech Ops"
+      },
+      "Recovery": {
+        "value": "Manual"
+      },
+      "ServiceLevel":{
+        "value": "stg"
+      },
+      "Environment": {
+        "value": "stg"
+      }
+    }      
+}

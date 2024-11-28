@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "Region": {
+        "value": "eastus2"
+      },
+      "appName":{
+        "value": "ai-products"
+      },
+      "ResourceNameSuffix": {
+        "value": "sharedlog-a"
+      },
+      "ApplicationName":{
+        "value": "AI Products Platform"
+      },
+      "SNOWApplicationName":{
+        "value": "AI Products Platform"
+      },
+      "SNOWBASysID": {
+        "value": "8e76eaf2c345521480f62645df013152"
+      },
+      "SNOWBU": {
+        "value": "ITS"
+      },
+      "SNOWBusinessCriticality": {
+        "value": "Critical"
+      },
+      "SNOWDataClassification": {
+        "value": "Confidential"
+      },
+      "SNOWOwner": {
+        "value": "Amit Sethi (ITSGRTG)"
+      },
+      "SNOWValueStream": {
+        "value": "Tech Ops"
+      },
+      "Recovery": {
+        "value": "Manual"
+      },
+      "ServiceLevel":{
+        "value": "prod"
+      },
+      "Environment": {
+        "value": "prod"
+      }
+    }      
+}

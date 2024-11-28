@@ -1,0 +1,10 @@
+{
+    "version": {
+        "major": 4,
+        "minor": 0,
+        "patch": 0
+    },
+    "itemDisplayName": "Function App Module",
+    "description": "Function App Bicep Module with security requirements",
+    "summary": "Function App Module with service endpoint optional configuration, by default private."    
+}

@@ -1,0 +1,65 @@
+<!--
+    - Policies are applied in the order they appear.
+    - Position <base/> inside a section to inherit policies from the outer scope.
+    - Comments within policies are not preserved.
+-->
+<!-- Add policies as children to the <inbound>, <outbound>, <backend>, and <on-error> elements -->
+<policies>
+    <!-- Throttle, authorize, validate, cache, or transform the requests -->
+    <inbound>
+        <validate-jwt header-name="Authorization" failed-validation-httpcode="401" failed-validation-error-message="Unauthorized. Access token is missing or invalid." require-expiration-time="true" require-scheme="Bearer" require-signed-tokens="true" output-token-variable-name="jwt">
+            <openid-config url="https://sts.windows.net/b9248fe3-a45c-4b9f-b58c-2a3e3d18fc9e/.well-known/openid-configuration" />
+            <audiences>
+                <audience>api://moswalltechnologies.com/its/baqaai-qa</audience>
+            </audiences>
+            <issuers>
+                <issuer>https://sts.windows.net/b9248fe3-a45c-4b9f-b58c-2a3e3d18fc9e</issuer>
+            </issuers>
+            <required-claims>
+                <claim name="roles" match="any">
+                    <value>MW_BaQa_Readonly</value>
+                </claim>
+            </required-claims>
+        </validate-jwt>
+        <!--Decode process-->
+        <set-variable name="azpValue" value="@(context.Request.Headers.GetValueOrDefault("Authorization").AsJwt()?.Claims.GetValueOrDefault("appid"))" />
+        <!--Azp value to the request header -->
+        <set-header name="ClientId" exists-action="override">
+            <value>@((string)context.Variables["azpValue"])</value>
+        </set-header>
+        <choose>
+            <when condition="@(((Jwt)context.Variables["jwt"]).Claims["roles"].Contains("MW_BaQa_Readonly"))">
+                <set-variable name="credentials" value="{{api-admin-credentials}}" />
+            </when>
+        </choose>
+        <choose>
+            <when condition="@(context.Variables.GetValueOrDefault&lt;string&gt;("credentials","") == "")">
+                <return-response>
+                    <set-status code="401" reason="Unauthorized" />
+                </return-response>
+            </when>
+            <otherwise>
+                <set-header name="x-thirdparty-token" exists-action="override">
+                    <value>@(context.Variables.GetValueOrDefault&lt;string&gt;("credentials"))</value>
+                </set-header>
+            </otherwise>
+        </choose>
+        <set-header name="Ocp-Apim-Subscription-Key" exists-action="delete" />
+        <base />
+    </inbound>
+    <!-- Control if and how the requests are forwarded to services  -->
+    <backend>
+        <base />
+    </backend>
+    <!-- Customize the responses -->
+    <outbound>
+        <base />
+        <set-header name="Access-Control-Allow-Origin" exists-action="append">
+            <value>*</value>
+        </set-header>
+    </outbound>
+    <!-- Handle exceptions and customize error responses  -->
+    <on-error>
+        <base />
+    </on-error>
+</policies>

@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "environment": {
+        "value": "dev"
+      },
+      "businessDirectory": {
+        "value": "mw"
+      },
+      "azureServ": {
+        "value": "bai"
+      },
+      "apiname": {
+        "value": "bai"
+      },
+      "apimSuffix": {
+        "value": "ai-products-platform-a"
+      },
+      "apiType": {
+        "value": "http"
+      },
+      "apidescription": {
+        "value": "Function App bai API for BAQA"
+      },
+      "apidispname": {
+        "value": "Function App bai"
+      },
+      "version": {
+        "value": "v1.0"
+      },
+      "apiBackendName":{
+        "value": "func-mw-dev-baqa-workloads-a"
+      },
+      "backendurl":{
+        "value": "https://func-mw-dev-baqa-workloads-a.azurewebsites.net/api"
+      },
+      "loggerId": {
+        "value": "/subscriptions/b366e03e-5ee9-440f-9988-f9ce6248728b/resourceGroups/rg-mw-stg-ai-products-platform-a/providers/Microsoft.ApiManagement/service/apim-mw-stg-ai-products-platform-a/loggers/appi-mw-stg-ai-products-platform-a"
+      }
+    }
+}

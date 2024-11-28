@@ -1,0 +1,24 @@
+{
+    "IsEncrypted": false,
+    "Values": {
+      "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+      "AzureWebJobs.HttpExample.Disabled": "true",
+        "AzureWebJobsFeatureFlags" : "EnableWorkerIndexing",
+        "BUILD_FLAGS": "UseExpressBuild",
+        "FUNCTIONS_EXTENSION_VERSION": "~4",
+        "FUNCTIONS_WORKER_RUNTIME": "Python",
+        "openai_api_base": "",
+        "openai_client_id": "",
+        "openai_client_secret": "",
+        "openai_credential_scope": "",
+        "openai_deployment_name": "",
+        "openai_tenant_id": "",
+        "resource_id":"",
+        "SCM_DO_BUILD_DURING_DEPLOYMENT": "true"     
+    },
+    "Host": {
+      "LocalHttpPort": 7071,
+      "CORS": "*",
+      "CORSCredentials": false
+    }
+    }

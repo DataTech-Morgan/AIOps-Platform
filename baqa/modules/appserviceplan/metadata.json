@@ -1,0 +1,10 @@
+{
+    "version": {
+        "major": 4,
+        "minor": 0,
+        "patch": 0
+    },
+    "itemDisplayName": "Application Plan",
+    "description": "App Plan Bicep Module with security requirements",
+    "summary": "Summary describing the Bicep Application Plan Module"    
+}

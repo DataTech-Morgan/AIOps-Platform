@@ -1,0 +1,10 @@
+{
+    "version": {
+        "major": 2,
+        "minor": 1,
+        "patch": 0
+    },
+    "itemDisplayName": "Application Insights",
+    "description": "App Insight Bicep Module with security requirements",
+    "summary": "Summary describing the Bicep Application Insight Module."    
+}

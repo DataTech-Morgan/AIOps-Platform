@@ -1,0 +1,10 @@
+{
+    "azureFunctions.projectSubpath": "func-jma-dev-baqa-ai-a-bakd",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv",
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "codeQL.githubDatabase.download": "never",
+    "azureFunctions.deploySubpath": ""
+}

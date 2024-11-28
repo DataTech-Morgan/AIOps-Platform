@@ -1,0 +1,78 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "region":{
+        "value": "eastus2"
+      },
+      "businessDirectory": {
+        "value": "mw"
+      },
+      "deploymentStage": {
+        "value": "stg"
+      },
+      "applicationName": {
+        "value": "baqa-workloads"
+      },
+      "applicationId": {
+        "value": "a"
+      },
+      "tags": {
+        "value": {
+          "ApplicationName": "AI BaQa components",
+          "Environment": "stg",          
+          "SNOWApplicationName": "AI BaQa components",
+          "SNOWBASysID": "8e76eaf2c345521480f62645df013152",
+          "SNOWBU": "ITS",
+          "SNOWBusinessCriticality": "Critical",
+          "SNOWDataClassification": "Confidential",
+          "SNOWOwner": "Amit Sethi (ITSGRTG)",
+          "SNOWValueStream": "Tech Ops",
+          "ServiceLevel": "stg",
+          "Recovery": "Manual"
+        }
+      },
+      "workspaceId": {
+        "value": "/subscriptions/b366e03e-5ee9-440f-9988-f9ce6248728b/resourcegroups/rg-mw-stg-ai-products-sharedlog-a/providers/microsoft.operationalinsights/workspaces/log-mw-stg-ai-products-sharedlog-a"
+      },
+      "roleKeyVaultDefinitionID":{
+        "value": "4633458b-17de-408a-b874-0445c86b69e6"
+      },      
+      "roleAppiDefinitionResourceID": {
+        "value": "92aaf0da-9dab-42b6-94a3-d43ce8d16293"
+      },
+      "appServicePlanFuncAppKind":{
+        "value": "linux"
+      },
+      "appServicePlanfuncAppSKU":{
+        "value": "P1v3"
+      },
+      "appServicePlanfuncAppTier":{
+        "value": "PremiumV3"
+      },
+      "subnetBackEndIntegrationID": {
+        "value": "/subscriptions/b366e03e-5ee9-440f-9988-f9ce6248728b/resourceGroups/rg-mw-stg-spokevnet-eastus2-a/providers/Microsoft.Network/virtualNetworks/vnet-mw-stg-ai-products-platform-eastus2-a/subnets/snet-mw-stg-ai-baqa-app-eastus2-a"
+      },
+      "funcWorkerRuntimeString": {
+        "value": "Python"
+      },
+      "productName":{
+        "value": "bai"
+      },
+      "subnetcognitiveservID": {
+        "value": "/subscriptions/b366e03e-5ee9-440f-9988-f9ce6248728b/resourceGroups/rg-mw-stg-spokevnet-eastus2-a/providers/Microsoft.Network/virtualNetworks/vnet-mw-stg-ai-products-platform-eastus2-a/subnets/snet-mw-stg-ai-products-apim-eastus2-a"
+      },
+      "openaiUrl":{
+        "value": "https://coreai-api-stg.mosswalltechnologies.com/oai/v1.0"
+      },
+      "openaiDeplName":{
+        "value": "gpt-4o-mini"
+      },
+      "apimurltest": {
+        "value": "https://apim-to-stg-aiml-a.jmfamily.com/status-0123456789abcdef"
+      },
+      "newOrExisting":{
+        "value": "new"
+      }
+    }
+}
